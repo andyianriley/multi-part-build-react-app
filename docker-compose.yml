@@ -1,0 +1,14 @@
+version: '3.2'
+
+services:
+  app:
+    image: andyianriley/multi-part-build-react-app
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+    - BASE_URI=/
+    - PORT=8080
+    ports:
+      - 8080:8080
